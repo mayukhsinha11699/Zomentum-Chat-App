@@ -24,10 +24,10 @@ body{
 #chat-container {
     display: grid;
     grid: 
-        'search-container chat-title' 71px
+        'search-container chat-title' 60px
         'conversation-list chat-message-list' 1fr
-        'new-message-container chat-form' 78px
-        / 275px 1fr;
+        'new-message-container chat-form' 60px
+        / 325px 1fr;
 
     min-width: 800px;
     max-width: 1400px;
@@ -58,7 +58,7 @@ body{
     color: #eee;
     outline: none;
     font-weight: bold;
-    border-radius: 2px;
+    border-radius: 20px;
     height: 30px;
     border: 0;
     padding-left: 48px;
@@ -67,6 +67,7 @@ body{
     background: url('../images/search/search.svg') no-repeat rgba(255, 255, 255, 0.3);
     background-position: 15px center;
     background-size: 20px 20px;
+    
 }
 
 #search-container input::placeholder {
