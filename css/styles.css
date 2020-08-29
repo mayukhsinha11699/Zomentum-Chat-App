@@ -10,7 +10,6 @@ body {
     background: #090E11 !important;
 }
 
-
 html {
     font-family: Arial, Helvetica, sans-serif;
     background: #090E11 !important;
@@ -28,7 +27,7 @@ body{
         'search-container chat-title' 60px
         'conversation-list chat-message-list' 1fr
         'new-message-container chat-form' 60px
-        / 325px 1fr;
+        / 350px 1fr;
 
     min-width: 800px;
     max-width: 1400px;
@@ -46,6 +45,7 @@ body{
 }
 
 #search-container {
+    color: #eee;
     display: grid;
     align-items: center;
     grid-area: search-container;
@@ -55,10 +55,11 @@ body{
     z-index: 1;
 }
 
-#search-container input {
+
+#search-container input{
     color: #eee;
+    background-color: #323739;
     outline: none;
-    font-weight: bold;
     border-radius: 20px;
     height: 30px;
     border: 0;
@@ -70,9 +71,11 @@ body{
     background-size: 20px 20px;
 }
 
+#search-container input[type = "text"] {
+    background-color: #323739;
+}
 #search-container input::placeholder {
-    color: #ddd;
-    font-weight: bold;
+    color: #696D6E;
 }
 
 #conversation-list {
@@ -83,11 +86,11 @@ body{
 .conversation {
     display: grid;
     grid-template-columns: 40px 1fr max-content;
-    grid-gap: 10px;
+    grid-gap: 3px;
     color: #ddd;
     font-size: 1.3rem;
     border-bottom: 1px solid #33383A;
-    padding: 20px 20px 20px 15px;
+    padding: 17px 20px 17px 15px;
 }
 
 .conversation.active,
@@ -106,7 +109,7 @@ body{
 }
 
 .person-name {
-    font-weight: bold;
+    font-size: medium;
     color: #eee;
     padding-left: 5px;
     white-space: nowrap;
@@ -117,10 +120,11 @@ body{
 .date-time {
     color: #ddd;
     white-space: nowrap;
-    font-size: 1rem;
+    font-size: small;
 }
 
 .conversation-message{
+    font-size: 1.5rem;
     grid-column: span 2;
     padding-left: 5px;
     white-space: nowrap;
@@ -138,20 +142,20 @@ body{
     padding: 0 15px;
 }
 
-#new-message-container a {
-    display: grid;
-    place-content: center center;
-    /* background: #eee; */
-    border-radius: 100%;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 3.6rem;
-}
+ #new-message-container a {
+     display: grid;
+    place-content: center center; 
+     border-radius: 100%; 
+     color: #eee; 
+     text-decoration: none; 
+     font-size: 3.6rem; 
+  } 
 
 #chat-title,
 #chat-input {
     background: #262D31;
 }
+
 
 #chat-title {
     display: grid;
@@ -166,6 +170,7 @@ body{
     box-shadow: 0 1px 3px -1px rgba(0,0,0,0.75);
     padding: 0 20px;
 }
+
 
 #chat-title > img,
 #conversations > img {
@@ -218,11 +223,12 @@ body{
 .other-message .message-text {
     background: #262D31;
     color: #ffffff;
-    border: 1px solid #ddd;
+    /* border: 1px solid #ddd; */
     border-radius: 14px 14px 14px 0;
 }
 
 #chat-input {
+    background-color: #131C21;
     display: grid;
     grid: 51px / 32px 1fr;
     align-content: center;
@@ -230,20 +236,25 @@ body{
     grid-gap: 15px;
     grid-area: chat-form;
     border-radius: 0 0 10px 0;
-    border-top: 1px solid rgba(0,0,0,0.25);
     padding-left: 22px;
     padding-right: 22px;
 }
 
 #chat-input input {
     outline: none;
-    padding: 15px;
-    border: 2px solid #ddd;
-    color: #330;
+    padding: 8px;
+    color: #eee;
     border-radius: 30px;
     font-size: 1.4rem;
+    border-color: transparent !important;
 }
 
+#chat-input input[type = "text"] {
+    background-color: #323739;
+}
+#chat-input input::placeholder {
+    color: #696D6E;
+}
 #chat-input > img {
     cursor: pointer;
     max-width: 33px;
@@ -251,5 +262,14 @@ body{
 }
 
 ::-webkit-scrollbar {
-    display: none;
+    width: 6px!important;
+    height: 6px!important;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background-color: hsla(0,0%,100%,.16);
+}
+
+::-webkit-scrollbar-track {
+    background-color: initial;
 }
