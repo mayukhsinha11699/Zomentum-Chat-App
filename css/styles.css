@@ -30,8 +30,8 @@ body{
         / 275px 1fr;
 
     min-width: 800px;
-    max-width: 1000px;
-    max-height: 800px;
+    max-width: 1400px;
+    max-height: 1000px;
     width: 100%;
     height: 95vh;
     background: #262D31;
@@ -175,6 +175,50 @@ body{
 
 #chat-message-list {
     grid-area: chat-message-list;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0 20px;
+    background-image: url("https://fsa.zobj.net/crop.php?r=SRKeeSpnn8YXEr5YHYRAhQuPohQ5hSmiJsyBpIip50o5TidkOSBx7DTMVW0J_x8GhypvV9cEeGp2XK7w6iGpqYdug-PhhVuUDF4Ok-_bEGYBnzBt4SCxOovNrnrUUwT57kTriIddr-HdPOsO");
+
+}
+
+.message-row {
+    display: grid;
+    grid-template-columns: 70%;
+    margin-bottom: 20px;
+}
+.other-message{
+    justify-items: start;
+}
+
+.you-message{
+    justify-items: end;
+    justify-content: end;
+}
+
+.message-time {
+    font-size: 1.3rem;
+    color: #777;
+}
+
+.message-text {
+    padding: 9px 14px;
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+}
+
+.you-message .message-text {
+    background: #054740;
+    color: #eee;
+    border: 1px solid #054740;
+    border-radius: 14px 14px 0 14px;
+}
+
+.other-message .message-text {
+    background: #262D31;
+    color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 14px 14px 14px 0;
 }
 
 #chat-input {
