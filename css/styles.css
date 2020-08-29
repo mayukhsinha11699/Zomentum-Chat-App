@@ -99,7 +99,7 @@ body{
 }
 
 #chat-title,
-#chat-form {
+#chat-input {
     background: #262D31;
 }
 
@@ -117,7 +117,8 @@ body{
     padding: 0 20px;
 }
 
-#chat-title > img {
+#chat-title > img,
+#chat-input > img {
     cursor: pointer;
     max-width: 50px;
     max-height: 50px;
@@ -127,8 +128,30 @@ body{
     grid-area: chat-message-list;
 }
 
-#chat-form {
+#chat-input {
+    display: grid;
+    grid: 51px / 32px 1fr;
+    align-content: center;
+    align-items: center;
+    grid-gap: 15px;
     grid-area: chat-form;
     border-radius: 0 0 10px 0;
     border-top: 1px solid rgba(0,0,0,0.25);
+    padding-left: 22px;
+    padding-right: 22px;
+}
+
+#chat-input input {
+    outline: none;
+    padding: 15px;
+    border: 2px solid #ddd;
+    color: #330;
+    border-radius: 30px;
+    font-size: 1.4rem;
+}
+
+#chat-input > img {
+    cursor: pointer;
+    max-width: 33px;
+    max-height: 33px;
 }
