@@ -29,7 +29,7 @@ body{
         'search-container chat-message-list' 40px
         'conversation-list chat-message-list' 1fr
         'conversation-list chat-form' 60px
-        / 425px 1fr;
+        / 1fr 2.3fr;
         gap: 2px 2px;
 
     min-width: 800px;
@@ -56,6 +56,7 @@ body{
     border-top: 1px solid rgba(0,0,0,0.25);
     padding: 0 15px;
     overflow: hidden;
+    border-radius: 10px 0 0 0;
 }
 
  #new-message-container a {
@@ -139,6 +140,7 @@ body{
 }
 
 #conversation-list {
+    border-radius: 0 0 0 10px;
     grid-area: conversation-list;
     overflow-y: scroll;
 }
