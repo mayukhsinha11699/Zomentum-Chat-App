@@ -1,9 +1,9 @@
+/* common for all css  */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 
 html, 
 body {
@@ -22,6 +22,23 @@ body{
     place-items: center center;
 }
 
+.icons{
+    cursor: pointer;
+}
+/* --------------------------------------------------------------------------------- */
+/* We have 6 containers and we will customise them in the following order:
+
+grid css (common for the grid)
+
+New-message-container
+Search-container 
+conversation-list 
+chat-title 
+chat messages and conversations 
+chat inputs */
+/* ------------------------------------------------------------------------------- */
+
+/* grid css  */
 #chat-container {
     display: grid;
     grid: 
@@ -46,11 +63,12 @@ body{
     background: #0A1B23;
 }
 
+/* New Message container ------------------------------ */
 
 #new-message-container {
     background: #262D31;
     display: grid;
-    grid: "profile-pic empty empty status new-message menu" 40px / 40px 1fr 40px 40px 40px;
+    grid: "profile-pic empty empty status new-message menu" 40px / 40px 1fr 40px 40px;
     align-content: center;
     grid-area: new-message-container;
     border-top: 1px solid rgba(0,0,0,0.25);
@@ -58,10 +76,8 @@ body{
     overflow: hidden;
     border-radius: 10px 0 0 0;
 }
-
- #new-message-container a {
-    
-    
+ 
+#new-message-container a {
      display: grid;
     place-content: center center; 
      border-radius: 100%; 
@@ -69,22 +85,21 @@ body{
      text-decoration: none; 
      font-size: 3.6rem; 
      overflow: hidden;
-  } 
+} 
 
-  #profile-pic{
+#profile-pic{
     background-image: url("https://i.imgur.com/YxiVw1f.png");
     grid-area: auto;
     width: 40px;
     height: 40px;
     border-radius: 20px;
     background-size: cover;
-    background-position: center;
-    
-  }
+    background-position: center; 
+}
 
-  #status,
-  #new-message,
-  #menu{
+#status,
+#new-message,
+#menu{
     display: grid;
     place-content: center center;
     color: #B1B3B5;  
@@ -92,13 +107,11 @@ body{
     align-content: center;
     width: 40px;
     height: 40px;
-  }
+}
  
-  .icons{
-      cursor: pointer;
-  }
+ 
 
-
+/* search container -------------------------------------- */
 
 #search-container {
     color: #eee;
@@ -109,13 +122,6 @@ body{
     box-shadow: 0 1px 3px -1px rgba(0,0,0,0.75);
     z-index: 1;
 }
-
-#top-elements {
-    width: 100%;
-    height: 100%;
-    background-color: orange !important ;
-}
-
 
 #search-container input{
     color: #eee;
@@ -135,16 +141,19 @@ body{
 #search-container input[type = "text"] {
     background-color: #323739;
 }
+
 #search-container input::placeholder {
     color: #696D6E;
 }
+
+
+/* conversation List -------------------------------------- */
 
 #conversation-list {
     border-radius: 0 0 0 10px;
     grid-area: conversation-list;
     overflow-y: scroll;
 }
-
 
 .conversation {
     display: grid;
@@ -196,6 +205,7 @@ body{
 }
 
 
+/* chat title section  --------------------------------------*/
 
 #chat-title,
 #chat-input {
@@ -222,6 +232,7 @@ body{
 #other-profile {
     border-radius: 60%;
 }
+
 #search-chat,
   #attach-file,
   #chat-menu{
@@ -235,7 +246,7 @@ body{
     justify-items: end;
     justify-content: end;
     
-  }
+}
 
 #chat-title > img,
 #conversations > img {
@@ -243,6 +254,9 @@ body{
     max-width: 40px;
     max-height: 40px;
 }
+
+
+/* chat messages and conversation section --------------------- */
 
 #chat-message-list {
     grid-area: chat-message-list;
@@ -293,6 +307,9 @@ body{
     /* border: 1px solid #ddd; */
     border-radius: 14px 14px 14px 0;
 }
+
+
+/* Chat input Section  */
 
 #chat-input {
     background-color: #1E2428;
@@ -345,11 +362,13 @@ body{
 
 .text-input:empty ~ #submit-button {
     display: none;
-  }
+}
 .text-input:not(:empty) ~ #voice-button {
     display: none;
-  }
+}
 
+
+/* scroll bar customisation -----------------------------------*/
 
 ::-webkit-scrollbar {
     width: 6px!important;
@@ -360,15 +379,3 @@ body{
     background-color: hsla(0,0%,100%,.16);
 }
 
-::-webkit-scrollbar-track {
-    background-color: initial;
-}
-
-
-/* -------------------------- */
-
-.unread-messsages{
-    display:block; min-width:20px; padding:3px; border-radius:12px; margin:0 5px; background-color:#3cdf7a;
-    color:var(--white); font-size:12rem; font-weight:bold; text-align:center;  
-    &:empty{display:none;}
-  }

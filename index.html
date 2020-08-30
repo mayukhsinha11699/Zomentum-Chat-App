@@ -8,17 +8,30 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="icon" href="/images/favicon.png">
 </head>
+
+<!-- This code is made using CSS grids. There are basically 6 grid elments which are mentioned below in the chat-container div-->
 <body>
     <div id="chat-container" >
         <div id="search-container" >
            <input type="text" placeholder="Search or start a new chat">
         </div>
+
+        <!-- This new-message-container contains the Profile picture and the top left icon sets -->
+        <div id="new-message-container" >
+
+            <div id="profile-pic"><a href="#"></a></div>
+            <div class="empty"></div>
+            <div class="icons" id="status"><i class="fas fa-circle-notch fa-lg"></i></div>
+            <div class="icons" id="new-message"><i class="far fa-comments fa-lg"></i></div>
+            <div class="icons" id="menu"><i class="fas fa-ellipsis-v fa-lg"></i></div>
+            
+       </div>
+
         <div id="conversation-list" >
 
-            <!-- This is a sample text! must change it -->
-
-            
+            <!-- Conversation List elements start here -->
 
             <div class="conversation">
                 <img src="images/people/1.png" alt="Mayukh Sinha">
@@ -45,7 +58,8 @@
                 <div class="conversation-message">
                     If you were offered the position of mayor of your city, would you take it?
                 </div>
-                <!-- <div class="chats-item-info-item"><span class="unread-messsages">1</span></div> -->
+                
+
             </div>
             <div class="conversation">
                 <img src="images/people/3.png" alt="Mayukh Sinha">
@@ -59,6 +73,8 @@
                     What board game do you like the most?
                 </div>
             </div>
+
+
             <div class="conversation">
                 <img src="images/people/4.png" alt="Mayukh Sinha">
                 <div class="person-name">
@@ -71,6 +87,8 @@
                     If you get rid the world of one disease what would it be?
                 </div>
             </div>
+
+
             <div class="conversation">
                 <img src="images/people/5.png" alt="Mayukh Sinha">
                 <div class="person-name">
@@ -83,6 +101,8 @@
                     Your Favorite day of the week?
                 </div>
             </div>
+
+
             <div class="conversation">
                 <img src="images/people/6.png" alt="Mayukh Sinha">
                 <div class="person-name">
@@ -95,6 +115,7 @@
                     If you inherited or won a million dollars, what’s the very first thing you would do with the money?
                 </div>
             </div>
+
 
             <div class="conversation">
                 <img src="images/people/7.png" alt="Mayukh Sinha">
@@ -109,6 +130,7 @@
                 </div>
             </div>
 
+
             <div class="conversation">
                 <img src="images/people/8.png" alt="Mayukh Sinha">
                 <div class="person-name">
@@ -121,6 +143,7 @@
                     What jobs do your parents do?
                 </div>
             </div>
+
 
             <div class="conversation">
                 <img src="images/people/9.png" alt="Mayukh Sinha">
@@ -135,6 +158,7 @@
                 </div>
             </div>
 
+
             <div class="conversation">
                 <img src="images/people/10.png" alt="Mayukh Sinha">
                 <div class="person-name">
@@ -147,6 +171,7 @@
                     How old is your pet?
                 </div>
             </div>
+
 
             <div class="conversation">
                 <img src="images/people/11.png" alt="Mayukh Sinha">
@@ -161,6 +186,7 @@
                 </div>
             </div>
 
+
             <div class="conversation">
                 <img src="images/people/12.png" alt="Mayukh Sinha">
                 <div class="person-name">
@@ -173,6 +199,7 @@
                     What is your favorite smell?
                 </div>
             </div>
+
 
             <div class="conversation">
                 <img src="images/people/13.png" alt="Mayukh Sinha">
@@ -187,6 +214,7 @@
                 </div>
             </div>
 
+
             <div class="conversation">
                 <img src="images/people/14.png" alt="Mayukh Sinha">
                 <div class="person-name">
@@ -200,34 +228,24 @@
                 </div>
             </div>
 
-            <!-- Sample text ends here -->
+            <!-- List elements ends here -->
         </div>
-        <div id="new-message-container" >
-             <div id="profile-pic"><a href="#"></a></div>
-             <div class="empty"></div>
-
-            <div class="icons" id="status"><i class="fas fa-circle-notch fa-lg"></i></div>
-            <div class="icons" id="new-message"><i class="far fa-comments fa-lg"></i></div>
-            <div class="icons" id="menu"><i class="fas fa-ellipsis-v fa-lg"></i></div>
-
-
-            
-            <!-- <span class="glyphicon glyphicon-log-out"></span> -->
-            <div class="top-elements">
-                
-            </div>
-        </div>
+       
         <div id="chat-title" >
+
             <img id="other-profile" src="images/people/1.png" alt="Profile Picture">
-           <span id="other-name">Rachit Sir</span>
-           
-           <div class="icons" id="search-chat"><i class="fas fa-search fa-lg"></i></div>
+            <span id="other-name">Rachit Sir</span>
+            <div class="icons" id="search-chat"><i class="fas fa-search fa-lg"></i></div>
             <div class="icons" id="attach-file"><i class="fa fa-paperclip fa-lg"></i></div>
             <div class="icons" id="chat-menu"><i class="fas fa-ellipsis-v fa-lg"></i></div>
            
-           
         </div>
+        
+        <!-- For a backend project the next section will be used as a 
+            stack and all the new chats will be pushed into it with appropriate classes added to them -->
+
         <div id="chat-message-list">
+
             <div class="message-row you-message">
                 <div class="message-text">
                     To sure calm much most long me mean. Able rent long in do we.
@@ -244,6 +262,7 @@
                    10:11 PM
                 </div>
             </div>
+
             <div class="message-row other-message">
                 <div class="message-text">
                    Generate some random text?
@@ -252,6 +271,7 @@
                    10:09 PM
                 </div>
             </div>
+
             <div class="message-row you-message">
                 <div class="message-text">
                     I learned css grid and flexbox to create this project.
@@ -271,6 +291,7 @@
                    10:08 PM
                 </div>
             </div>
+
             <div class="message-row other-message">
                 <div class="message-text">
                     So you have knowledge of React and backend?
@@ -299,6 +320,7 @@
                    10:04 PM
                 </div>
             </div>
+
             <div class="message-row you-message">
                 <div class="message-text">
                     Hello Sir
@@ -307,6 +329,7 @@
                    10:02 PM
                 </div>
             </div>
+
             <div class="message-row other-message">
                 <div class="message-text">
                     Hello Mayukh
@@ -315,22 +338,18 @@
                     10:00 PM
                 </div>
             </div>
+
         </div>
 
         <div id="chat-input" >
+
             <img  src="images/features/emoji.png" alt="Attach files">
-          
             <div class="text-input" id="message-box" placeholder="Type a message" contenteditable></div>
             <img id="voice-button" src="images/features/mic.png" alt="record voice">
             <img id="submit-button" src="images/features/submit.png" alt="send message">
-          </div>
 
+        </div>
 
-        <!-- <div id="chat-input" >
-               
-                 <input class="text-input box" id="message-box" type="text" placeholder="Type a message">
-            
-        </div> -->
     </div>
     <script src="index.js" ></script>
 </body>
