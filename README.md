@@ -1,7 +1,7 @@
 # Zomentum Chat App (Front End Project)
 
 Website is hosted
- [here ](https://mayukhsinha11699.github.io/Zomentum-Chat-App/)and is live using github pages.
+ [here ](https://mayukhsinha11699.github.io/Zomentum-Chat-App/) using github pages.
 
 URL:  https://mayukhsinha11699.github.io/Zomentum-Chat-App/
 
@@ -26,6 +26,4 @@ I could have used ReactJS (or any other framework) but the purpose of the projec
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-If you like this repo dont forget to star it :p
+If you like this repository dont forget to star it :p
