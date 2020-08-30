@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 html, 
 body {
     height: 100%;
@@ -302,6 +303,7 @@ body{
     border-radius: 0 0 10px 0;
     padding-left: 22px;
     padding-right: 22px;
+    overflow-y: scroll;
 }
 
  .text-input {
@@ -312,10 +314,14 @@ body{
     border-radius: 30px;
     font-size: 1.4rem;
     border-color: transparent !important;
+    /* overflow: scroll; */
+
 }
 
  .text-input[type = "text"] {
     background-color: #323739;
+    overflow: scroll;
+
 }
 
 
@@ -341,6 +347,7 @@ body{
 .text-input:not(:empty) ~ #voice-button {
     display: none;
   }
+
 
 ::-webkit-scrollbar {
     width: 6px!important;
