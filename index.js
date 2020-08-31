@@ -63,7 +63,6 @@ const myFunc = () => {
 
     chat.classList.add('message-row');
     chat.classList.add('you-message');
-
     chatDiv.classList.add('message-text');
     timediv.classList.add('message-time');
 
