@@ -15,6 +15,7 @@ $('div[contenteditable]').keydown(function(e) {
 });
 
 // get element inside div dynamically?
+let notWorking = document.querySelectorAll(".not-working");
 let sendButton = document.querySelector("#submit-button");
 let t = document.getElementById('message-box').textContent;
 
@@ -33,13 +34,27 @@ document.getElementById("message-box").addEventListener("input", function() {
 }, false);
 
 
-    //function to prepend a new div in the conversation-list id
+//function to prepend a new div in the conversation-list id
 const myFunc = () => {
+
+    let check = true;
+    let time = new Date().getHours();
+    
+    if(time >= 12){
+        time = time - 12;
+        check = false;
+    } 
+    if(time == 0) time = 12;
+    let AMorPM = "AM";
+    if(check == false){
+        AMorPM = "PM";
+    }
+    let minutes = new Date().getMinutes();
     let chat = document.createElement('div');
     let chatDiv = document.createElement('div');
     let messageText = document.createTextNode(t);
     let timediv = document.createElement('div');
-    let messageTime = document.createTextNode("11:09");
+    let messageTime = document.createTextNode(time  + ":" + minutes + " " + AMorPM);
 
     chat.appendChild(chatDiv);
     chat.appendChild(timediv);
@@ -57,4 +72,10 @@ const myFunc = () => {
     document.getElementById('message-box').textContent = "";
 }
 
-
+//Popup for non functioning buttons
+ notWorking.forEach(y => {
+     y.addEventListener("click", function(){
+        alert(x);   
+     });
+ })
+ 

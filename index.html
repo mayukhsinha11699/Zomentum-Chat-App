@@ -21,11 +21,11 @@
         <!-- This new-message-container contains the Profile picture and the top left icon sets -->
         <div id="new-message-container" >
 
-            <div id="profile-pic"><a href="#"></a></div>
+            <div id="profile-pic" class="not-working"><a href="#"></a></div>
             <div class="empty"></div>
-            <div class="icons" id="status"><i class="fas fa-circle-notch fa-lg"></i></div>
-            <div class="icons" id="new-message"><i class="far fa-comments fa-lg"></i></div>
-            <div class="icons" id="menu"><i class="fas fa-ellipsis-v fa-lg"></i></div>
+            <div class="icons not-working" id="status"><i class="fas fa-circle-notch fa-lg"></i></div>
+            <div class="icons not-working" id="new-message"><i class="far fa-comments fa-lg"></i></div>
+            <div class="icons not-working" id="menu"><i class="fas fa-ellipsis-v fa-lg"></i></div>
             
        </div>
 
@@ -233,11 +233,11 @@
        
         <div id="chat-title" >
 
-            <img id="other-profile" src="images/people/1.png" alt="Profile Picture">
+            <img id="other-profile" class="not-working" src="images/people/1.png" alt="Profile Picture">
             <span id="other-name">Rachit Sir</span>
-            <div class="icons" id="search-chat"><i class="fas fa-search fa-lg"></i></div>
-            <div class="icons" id="attach-file"><i class="fa fa-paperclip fa-lg"></i></div>
-            <div class="icons" id="chat-menu"><i class="fas fa-ellipsis-v fa-lg"></i></div>
+            <div class="icons not-working" id="search-chat"><i class="fas fa-search fa-lg"></i></div>
+            <div class="icons not-working" id="attach-file"><i class="fa fa-paperclip fa-lg"></i></div>
+            <div class="icons not-working" id="chat-menu"><i class="fas fa-ellipsis-v fa-lg"></i></div>
            
         </div>
         
@@ -245,6 +245,15 @@
             stack and all the new chats will be pushed into it with appropriate classes added to them -->
 
         <div id="chat-message-list">
+
+            <div class="message-row other-message">
+                <div class="message-text">
+                   Can you append a new message by hitting ENTER and CLICKING ?
+                </div>
+                <div class="message-time">
+                   10:09 PM
+                </div>
+            </div>
 
             <div class="message-row you-message">
                 <div class="message-text">
@@ -343,9 +352,9 @@
 
         <div id="chat-input" >
 
-            <img  src="images/features/emoji.png" alt="Attach files">
-            <div class="text-input" id="message-box" placeholder="Type a message" contenteditable></div>
-            <img id="voice-button" src="images/features/mic.png" alt="record voice">
+            <img class="not-working" id="emoji-button" src="images/features/emoji.png" alt="Attach files">
+            <div  class="text-input" id="message-box" placeholder="Type a message" contenteditable></div>
+            <img class="not-working" id="voice-button" src="images/features/mic.png" alt="record voice">
             <img id="submit-button" src="images/features/submit.png" alt="send message">
 
         </div>
